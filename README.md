@@ -106,7 +106,7 @@ font-size:14px;
 <script>
 function calculateSell() {
   let value = document.getElementById("sellValue").value;
-  let rate = 0.97; // Example 97%
+  let rate = 0.97;
   if(value){
     document.getElementById("sellAmount").value = (value * rate).toFixed(2);
   }
@@ -114,7 +114,7 @@ function calculateSell() {
 
 function calculateBuy() {
   let value = document.getElementById("buyValue").value;
-  let rate = 0.98; // Example 98%
+  let rate = 0.98;
   if(value){
     document.getElementById("buyAmount").value = (value * rate).toFixed(2);
   }
@@ -143,6 +143,15 @@ function calculateBuy() {
 
 <label>IEC Number</label>
 <input type="text" required>
+
+<label>Contact Person Name (Buyer/Seller)</label>
+<input type="text" required>
+
+<label>Email ID</label>
+<input type="email" required>
+
+<label>Contact Mobile Number</label>
+<input type="tel" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
 
 <label>Transaction Type</label>
 <select required>
@@ -196,7 +205,8 @@ function calculateBuy() {
 </form>
 
 <div class="note">
-<strong>Important Compliance Condition:</strong><br><br>
+<strong>Important Instructions:</strong><br><br>
+• Please provide Email ID and Contact Mobile Number of Buyer/Seller along with his name.<br>
 • Shipping Bill against the RoDTEP License must have realised BRC/FIRC.<br>
 • BRC details must be furnished in Excel format.<br>
 • Bank Certificate confirming realisation is mandatory.<br>
